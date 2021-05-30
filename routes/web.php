@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BooksController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,9 +13,6 @@ use App\Http\Controllers\BooksController;
 |
 */
 
-Route::get('/', function() {
+Route::get('/', function () {
     return view('welcome');
 });
-
-Route::post('/books' , [BooksController::class, 'store']);
-Route::patch('/books/{book}' , [BooksController::class, 'update']);
